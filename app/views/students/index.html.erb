@@ -1,0 +1,9 @@
+Search Field
+<%= form_tag 'students', method: 'get' do%>
+<%= text_field_tag 'student_name' %>
+<%= submit_tag ('search for student') %>
+<%end%>
+
+<% @students.each do |student| %>
+<%= render partial: 'student', locals:{student: student} %>
+<%end%>
